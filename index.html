@@ -1,38 +1,43 @@
+
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-           <title>Shopping List Website</title>
-           <link rel="stylesheet" href="style.css">
-           <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Story+Script&display=swap" rel="stylesheet">
-    </head>
-    <body>
-        <div id ="container">
-            <h1>Interactive Shopping List</h1>
-<form>
-    <label for="itemName">Item Name</label>
-    <input type="text" id="itemName" name="itemName">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <label for ="itemPrice">Item Price</label>
-    <input type="number" id="itemPrice" name="itemPrice">
+    <title>Shopping List Website</title>
 
-<button id="addItem">Add</button>
+    <link rel="stylesheet" href="style.css">
 
-    <button id="clearItem">Clear</button>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Story+Script&display=swap" rel="stylesheet">
+</head>
 
-            
-            </form>
-            </div>
+<body>
+    <div id="container">
+        <h1>Interactive Shopping List</h1>
 
+        <form id="shoppingForm">
+            <label for="itemName">Item Name</label>
+            <input type="text" id="itemName" name="itemName">
 
-<section id="list-container">
-    <div id="itemDisplay">
+            <label for="itemPrice">Item Price</label>
+            <input type="number" id="itemPrice" name="itemPrice" min="0.01" step="0.01">
 
+            <button id="addItem" type="submit">Add</button>
+            <button id="clearItem" type="button">Clear</button>
+        </form>
     </div>
-</section>
-        <script src="script.js"></script>
-    </body>
+
+    <section id="list-container">
+        <h2>My Shopping Items</h2>
+
+        <div id="itemDisplay"></div>
+
+        <h3>Total Cost: KSh <span id="totalCost">0.00</span></h3>
+    </section>
+
+    <script src="script.js"></script>
+</body>
 </html>
